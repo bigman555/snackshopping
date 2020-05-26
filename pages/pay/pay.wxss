@@ -34,13 +34,13 @@
 .pay .payItem {
   width: 100vw;
   display: flex;
-  height: 200rpx;
+  height: 150rpx;
   margin-top: 20rpx;
   border-bottom: 1px solid #E8E8E8;
 }
 .pay .payItem .payItemLeft {
-  flex: 2;
-  height: 200rpx;
+  flex: 1;
+  height: 150rpx;
 }
 .pay .payItem .payItemLeft image {
   width: 100%;
@@ -65,7 +65,7 @@
 .pay .bottom .bottomLeft {
   flex: 3;
   color: #A65250;
-  padding: 20rpx;
+  padding: 30rpx;
 }
 .pay .bottom .bottomRight {
   flex: 2;

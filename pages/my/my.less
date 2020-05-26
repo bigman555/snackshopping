@@ -1,0 +1,161 @@
+.my{
+    display: flex;
+    width: 100vw;
+    height: 100rpx;
+    background-color: #AB946D;
+    color: white;
+    align-items: center;
+    .username{
+        flex: 4;
+        .blockImg{
+            display: flex;
+            padding-left: 48rpx;
+            align-items: center;
+            .userImg{
+                width: 100rpx;
+                height: 100rpx;
+                image{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
+            .nickName{
+                margin-left: 20rpx;
+            }
+        }
+        button{
+            width: 50rpx;
+            position: relative;
+            left:-200rpx;
+            width: 150rpx;
+            font-size: 30rpx;
+            font-weight: 500;
+            padding: 5rpx;
+        }
+    }
+    .about{
+        flex: 1;
+    }
+}
+.address{
+    display: flex;
+    font-size: 40rpx;
+    width: 100vw;
+    height: 100rpx;
+    color: #99999A;
+    align-items: center;
+    border-bottom: 1px solid #9999B4;
+    margin-bottom: 10rpx;
+    .addressLeft{
+        width: 90%;
+        margin-left: 300rpx;
+    }
+    .addressRight{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        padding: 10rpx;
+        align-items: center;
+        view{
+            width: 20rpx;
+            height: 20rpx;
+            transform: rotate(45deg);
+            border-top: 2px solid #7F7F7F;
+            border-right: 2px solid #7F7F7F;
+        }
+    }
+}
+.contianer{
+    width: 100vw;
+    color: #9A9999;
+    font-size: 30rpx;
+    font-weight: 500;
+    view{
+        padding: 20rpx;
+        height: 80rpx;
+        line-height: 80rpx;
+    }
+    view:nth-child(2){
+        border-bottom: 1px solid #9999B4;
+        border-top: 1px solid #9999B4;
+    }
+}
+.myOrder{
+    .orderTitle{
+        height: 100rpx;
+        text-align: center;
+        line-height: 100rpx;
+        color: #9A9999;
+        font-size: 40rpx;
+        border-bottom: 1px solid #9A9999;
+    }
+    .orderList{
+        .orderNumber{
+            color: #9A9999;
+            margin: 10rpx;
+        }
+        .orderItem{
+            width: 100%;
+            height: 150rpx;
+            display: flex;
+            align-items: center;
+            padding: 20rpx;
+            .orderItem-left{
+                width: 20%;
+                height: 150rpx;
+                image{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .orderItem-middle{
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 20rpx;
+                .top{
+                    height: 50rpx;
+                }
+                .bottom{
+                    height: 50rpx;
+                }
+            }
+            .orderItem-right{
+                width: 20%;
+                color: #A53637;
+            }
+        }
+        .payment{
+            width: 100%;
+            height: 80rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #9A9999;
+            .paymentLeft{
+                width: 70%;
+                height: 80rpx;
+                line-height: 80rpx;
+                margin-left: 20rpx;
+            }
+            .paymentRight{
+                width: 30%;
+                display: flex;
+                align-items: center;
+                padding: 20rpx;
+                view{
+                    width: 100%;
+                    height: 60rpx;
+                    line-height: 60rpx;
+                    text-align: center;
+                    background-color: #B23031;
+                    color: white;
+                    border-radius: 10rpx;
+                }
+            }
+        }
+    }
+}

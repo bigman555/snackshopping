@@ -6,7 +6,8 @@ Page({
    */
   data: {
     address:{},
-    carts:[]
+    carts:[],
+    totalPrice:0
   },
 
   /**
@@ -15,7 +16,19 @@ Page({
   onLoad: function (options) {
 
   },
-
+  pay:function(e){
+    wx.showModal({
+      content: '支付接口暂时关闭',
+      success:function (res) {
+        if (res.confirm) {
+          wx.switchTab({
+            url:"/pages/my/my"
+          })
+        }
+      },
+    });
+      
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -29,8 +42,12 @@ Page({
   onShow: function () {
     let address = wx.getStorageSync("address")||{};
     let carts = wx.getStorageSync("carts")||{};
+    let totalPrice = 0;
+    for(let i = 0;i < carts.length;i++){
+      totalPrice += carts[i].data.price * carts[i].num;
+    }
     this.setData({
-      address,carts
+      address,carts,totalPrice:totalPrice.toFixed(2)
     })
   },
 

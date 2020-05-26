@@ -70,10 +70,11 @@ Page({
     carts.forEach(function(v,i){
       if(v.checked){
         totalPrice += v.num * v.data.price;
+        
       }
     })
     this.setData({
-      carts,totalPrice
+      carts,totalPrice : totalPrice.toFixed(2)
     })
     wx.setStorageSync("carts", carts);
   },
@@ -93,11 +94,12 @@ Page({
     let totalPrice = 0;
     carts.forEach(function(v,i){
       if(v.checked){
-        totalPrice += v.num * v.data.price;
+        totalPrice += (v.num * v.data.price);
       }
     })
     this.setData({
-      carts,totalPrice
+      totalPrice :totalPrice.toFixed(2),
+      carts,
     })
   },
 

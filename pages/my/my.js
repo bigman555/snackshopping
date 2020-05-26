@@ -5,16 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    address:{},
+    carts:[],
+    userInfo:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let address = wx.getStorageSync("address")||{};
+    let carts = wx.getStorageSync("carts")||[];
+    this.setData({
+      address,carts
+    })
   },
+  pay:function(e){
+    wx.showModal({
+      content:"支持接口暂时关闭",
+      success:function(res){
+        if(res.comfirm){
+          wx.switchTab({
+            url:"/pages/my/my"
+          })
+        }
+      }
 
+    })
+  },
+  getUserInfo:function(e){
+    console.log(e);
+    let userInfo = e.detail.userInfo;
+    this.setData({
+      userInfo
+    })
+    wx.setStorageSync("userInfo",userInfo)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -26,7 +52,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let userInfo = wx.getStorageSync("userInfo");
+    this.setData({
+      userInfo
+    })  
   },
 
   /**

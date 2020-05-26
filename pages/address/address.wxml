@@ -1,0 +1,2 @@
+<button bindtap="getAddress">获取地址</button>
+  

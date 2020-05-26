@@ -41,9 +41,9 @@
     </view>
     <view class="bottom">
         <view class="bottomLeft">
-            付款合计：￥{{}}
+            付款合计：￥{{totalPrice}}
         </view>
-        <view class="bottomRight">去付款</view>
+        <view class="bottomRight" bindtap="pay">去付款</view>
     </view>
         
 </view> 

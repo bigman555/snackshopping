@@ -14,22 +14,23 @@ Page({
   onLoad: function (options) {
 
   },
-
+  getAddress:async function(e){
+    let res = await asyncChooseAddress()
+    wx.setStorageSync("address",res)
+    wx.navigateBack()
+    console.log(res);
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady:async function () {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow:async function () {
-    let res = await asyncChooseAddress()
-    wx.setStorageSync("address",res)
-    wx.navigateBack()
-    console.log(res);
+  onShow:function () {
   },
 
   /**

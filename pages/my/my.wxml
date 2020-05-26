@@ -1,2 +1,83 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="myBoby">
+    <view class="my">
+        <view class="username">
+            <view wx:if="{{userInfo.nickName}}" class="blockImg">
+                <view class="userImg">
+                    <image src="{{userInfo.avatarUrl}}"></image>
+                </view>
+                <view class="nickName">
+                    {{userInfo.nickName}}
+                </view>
+            </view>
+            <block wx:else>
+                <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+            </block>
+        </view>
+        <view class="about">
+            关于我们
+        </view>
+    </view>
+    <navigator class="address" url="/pages/address/address" open-type="navigate">
+        <view class="addressLeft">
+            地址管理
+        </view>
+        <view class="addressRight">
+            <view></view>
+        </view>
+    </navigator>
+    <view class="contianer">
+        <view class="name">
+            {{address.userName}}
+        </view>
+        <view class="phone">
+            {{address.telNumber}}
+        </view>
+        <view class="contianerAddress">
+            {{address.provinceName}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}},邮编：{{address.postalCode}}
+        </view>
+    </view>
+    <view class="myOrder">
+        <view class="orderTitle">
+            我的订单
+        </view>
+        <view class="orderList" wx:for="{{carts}}" wx:key="index">
+            <view class="orderNumber">
+                订单编号：A41843
+            </view>
+            <view class="orderItem">
+                <view class="orderItem-left">
+                    <image src="{{item.data.imageUrl}}"></image>
+                </view>
+                <view class="orderItem-middle">
+                    <view class="top">
+                       {{item.data.title}}
+                    </view>
+                    <view class="bottom">
+                       {{item.data.count}}{{item.data.unit}}
+                    </view>  
+                </view>
+                <view class="orderItem-right">
+                    待付款
+                </view>
+            </view>
+            <view class="payment">
+                <view class="paymentLeft">
+                    实付：￥{{item.data.price*item.num}}
+                </view>
+                <view class="paymentRight" bindtap="pay">
+                    <view>付款</view>
+                </view>
+                   
+            </view>
+              
+                
+        </view>
+            
+    </view>
+      
+</view>
+  
+
+  
+  

@@ -23,7 +23,7 @@
             {{cartData.title}}
         </view>
         <view class="price">
-            ￥   {{cartData.price*num}}
+            ￥   {{cartData.price}}
         </view>
     </view>
     <!-- 上部分结束 -->
