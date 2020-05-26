@@ -1,0 +1,3 @@
+<view class="">
+  <newcart-list cartData="{{cartData}}" num="{{num}}"/>
+</view>

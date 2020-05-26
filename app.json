@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/address/address",
+    "pages/pay/pay",
+    "pages/shoppingcart/shoppingcart",
+    "pages/my/my",
+    "pages/cart/cart",
+    "pages/feilei/feilei",
+    "pages/mode/mode",
+    "pages/mode1/mode1",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#AB946D",
+    "navigationBarTitleText": "美食商城",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "#AB956D",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "image/home.png",
+      "selectedIconPath": "image/home-o.png"
+    },{
+      "pagePath": "pages/feilei/feilei",
+      "text": "分类",
+      "iconPath": "image/category.png",
+      "selectedIconPath": "image/category-o.png"
+    },{
+      "pagePath": "pages/shoppingcart/shoppingcart",
+      "text": "购物车",
+      "iconPath": "image/navigator.png",
+      "selectedIconPath": "image/navigator-o.png"
+    },{
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "image/my.png",
+      "selectedIconPath": "image/my-o.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

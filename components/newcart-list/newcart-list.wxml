@@ -1,0 +1,57 @@
+<view class="cart">
+<!-- 上部份开始 -->
+    <view class="top">
+        <navigator class="iconform" url="/pages/shoppingcart/shoppingcart" open-type="switchTab">
+            <view class="num {{num===0?'hide':''}}">{{num}}</view>
+            <image src="../../image/cart.png"></image>
+        </navigator>
+        <view class="cartImg">
+            <image src="{{cartData.imageUrl}}"></image>
+        </view>
+        <view class="cartText">
+            <view>
+                数量   {{cartData.count*numAddCart}} {{cartData.unit}}
+            </view>
+            <view class="cartAdd" bindtap="addNum">+</view>
+            <view>加入购物车</view>
+            <view bindtap="addCart" data-id="{{cartData.id}}"><image src="../../image/cart-o.png"></image></view>
+        </view>
+        <view class="stock">
+            {{cartData.stock}}
+        </view>
+        <view class="title">
+            {{cartData.title}}
+        </view>
+        <view class="price">
+            ￥   {{cartData.price*num}}
+        </view>
+    </view>
+    <!-- 上部分结束 -->
+    <!-- 下部分开始 -->
+    <view class="buttom">
+        <view class="buttomTitle">
+            <view class="{{currentData == 0 ? 'active' : ''}}" data-current = "0" bindtap="handleClick">
+                商品详情
+            </view>
+             <view class="{{currentData == 1 ? 'active' : ''}}" data-current = "1" bindtap="handleClick">
+                产品参数
+            </view>
+             <view class="{{currentData == 2 ? 'active' : ''}}" data-current = "2" bindtap="handleClick">
+                售后保障
+            </view>
+        </view>
+        <swiper class="bottomText" current="{{currentData}}" bindchange="handleChange">
+            <swiper-item >
+                {{cartData.detail}}
+            </swiper-item>
+            <swiper-item>
+                {{cartData.parameter}}
+            </swiper-item>
+            <swiper-item>
+                {{cartData.service}}
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 下部分结束 -->
+</view>
+  

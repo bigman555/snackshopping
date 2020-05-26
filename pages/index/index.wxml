@@ -1,0 +1,53 @@
+<view class="index">
+    <!-- 轮播图开始 -->
+    <swiper indicator-dots="true" indicator-color="black"
+    indicator-active-color="white"  autoplay="true" 
+    interval="3000" circular="true">
+      <swiper-item wx:for="{{swiperItem}}" wx:key="swiperImg" class="swiperImg">
+        <image src="{{item.swiperImg}}"></image>
+      </swiper-item>
+    </swiper>
+    <!-- 轮播图结束 -->
+    <!-- 精选主题开始 -->
+    <view class="contianer">
+        <view class="contianerTitle">
+            精选主题
+        </view>
+        <view class="containerItem">
+            <view class="containerNav">
+                <navigator class="nav" url="/pages/mode/mode" open-type="navigate">
+                    <image src="../../image/s1.png"></image>
+                </navigator>
+               <navigator class="nav" url="/pages/mode/mode" open-type="navigate">
+                    <image src="../../image/s2.png"></image>
+                </navigator>
+            </view>
+            <view class="containerNav2">
+               <navigator class="nav2" url="/pages/mode1/mode1" open-type="navigate">
+                    <image src="../../image/s3.png"></image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- 精选主题结束 -->
+    <!-- 最近新品开始 -->
+    <view class="product">
+        <view class="productTitle">
+            最近新品
+        </view>
+        <view class="productItem">
+            <navigator wx:for="{{shopList}}" wx:key="productImg" class="productNav" url="/pages/cart/cart?id={{item.id}}" open-type="navigate">
+                <view class="productImage">
+                    <image src="{{item.imageUrl}}"></image>
+                    <text class="productTxt"decode="true">
+                        {{item.title}}&nbsp;&nbsp;{{item.count}}&nbsp;{{item.unit}}
+                    </text>
+                    <view>
+                        ￥{{item.price}}
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <!-- 最近新品结束 -->
+</view>

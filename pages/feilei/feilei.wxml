@@ -1,0 +1,27 @@
+
+<!--pages/category/category.wxml-->
+<view class="fenlei">
+<!-- 左边开始 -->
+  <view class="left">
+    <view wx:for="{{cartDetail}}" wx:key="id">
+      <text id="{{index}}" class="{{index == current_index ? 'active' : ''}}" bindtap="change">{{item.cate}}</text>
+    </view>
+  </view>
+  <!-- 左边结束 -->
+  <!-- 右边开始 -->
+  <scroll-view scroll-y="true" class="right">
+    <navigator class="rightImg" url="/pages/mode/mode" open-type="navigate">
+      <image src="{{cartDetail[current_index]['banner']}}"></image>
+    </navigator>
+    <view>—— {{cartDetail[current_index]['cate']}} ——</view>
+    <view class="rightItem">
+      <view wx:for="{{cartDetail[current_index]['detail']}}" wx:key="id">
+        <navigator class="rightImg" url="/pages/cart/cart?id={{item.id}}" open-type="navigate">
+          <image src="{{item.thumb}}"></image>
+          <text>{{item.name}}</text>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 右边结束 -->
+</view>

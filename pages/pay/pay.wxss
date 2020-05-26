@@ -1,0 +1,77 @@
+.pay .payAddtree {
+  width: 100vw;
+  height: 100rpx;
+  text-align: center;
+  display: flex;
+  color: #7F7F7F;
+  border-bottom: 1px solid #7F7F7F;
+}
+.pay .payAddtree .left {
+  flex: 9;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5rpx;
+}
+.pay .payAddtree .left .leftTop {
+  display: flex;
+  justify-content: space-between;
+}
+.pay .payAddtree .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx;
+  align-items: center;
+}
+.pay .payAddtree .right view {
+  width: 20rpx;
+  height: 20rpx;
+  transform: rotate(45deg);
+  border-top: 2px solid #7F7F7F;
+  border-right: 2px solid #7F7F7F;
+}
+.pay .payItem {
+  width: 100vw;
+  display: flex;
+  height: 200rpx;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #E8E8E8;
+}
+.pay .payItem .payItemLeft {
+  flex: 2;
+  height: 200rpx;
+}
+.pay .payItem .payItemLeft image {
+  width: 100%;
+  height: 100%;
+}
+.pay .payItem .payItemRight {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pay .payItem .payItemRight view {
+  height: 33.33%;
+}
+.pay .bottom {
+  width: 100vw;
+  height: 100rpx;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+}
+.pay .bottom .bottomLeft {
+  flex: 3;
+  color: #A65250;
+  padding: 20rpx;
+}
+.pay .bottom .bottomRight {
+  flex: 2;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #AB946D;
+  color: white;
+}

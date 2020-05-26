@@ -1,0 +1,49 @@
+<!--pages/pay/pay.wxml-->
+<view class="pay">
+    <navigator class="payAddtree" url="/pages/address/address" open-type="navigate">
+        <view class="left">
+            <block wx:if="{{address.userName}}">
+                <view class="leftTop">
+                    <view class="name">
+                        收货人：{{address.userName}}
+                    </view>
+                    <view class="phone">
+                        电话：{{address.telNumber}}
+                    </view>
+                </view>
+                <view class="address">
+                    {{address.cityName}}{{address.countyName}}{{address.detailInfo}}，邮编：{{address.postalCode}}
+                </view>
+            </block>
+            <block wx:else>
+                添加收货地址
+            </block> 
+        </view> 
+        <view class="right">
+            <view></view>
+        </view>
+    </navigator>
+    <view class="payItem" wx:for="{{carts}}" wx:key="index">
+        <view class="payItemLeft">
+            <image src="{{item.data.imageUrl}}"></image>
+        </view>
+        <view class="payItemRight">
+            <view class="title">
+                {{item.data.title}}
+            </view>
+            <view class="price">
+                ￥{{item.data.price}}
+            </view>
+            <view class="price">
+                X{{item.num}}
+            </view>  
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="bottomLeft">
+            付款合计：￥{{}}
+        </view>
+        <view class="bottomRight">去付款</view>
+    </view>
+        
+</view> 

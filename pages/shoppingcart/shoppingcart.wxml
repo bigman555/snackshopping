@@ -1,0 +1,44 @@
+<view class="shoppingcart">
+    <view class="top">
+        <view class="shoppingcartItem" wx:for="{{carts}}" wx:key="index">
+            <view class="topLeft" bindtap="handleCheck" data-index="{{index}}">
+                <block wx:if="{{item.checked}}">
+                    <icon type="success" color="red"></icon>
+                </block>
+                <block wx:else>
+                    <icon type="circle"></icon>
+                </block>
+            </view>
+            <view class="topMiddle">
+                <view class="middleTop">
+                    {{item.data.title+" "}}{{" "+item.num*item.data.count+" "}}{{" "+item.data.unit}}
+                </view>
+                <view class="middleButtom">
+                    <view class="middleButtom-sub" bindtap="numSub" data-index="{{index}}">-</view>
+                    <view class="middleButtom-num">{{item.num}}</view>
+                    <view class="middleButtom-add" bindtap="numAdd" data-index="{{index}}">+</view>
+                </view>
+            </view>
+            <view class="topRight">
+                <view class="rightTop">￥{{item.data.price}}</view>
+                <view class="rightButtom" bindtap="removNum" data-index="{{index}}">X</view>
+            </view>
+        </view>
+    </view>
+    <view class="buttom">
+        <view class="buttomLeft">
+            <icon type="success_circle" color="white"
+                bindtap="handleAllCheck">
+            </icon>
+            <text>全选</text>  
+        </view>
+        <view class="buttomMiddle">
+             <text>￥{{totalPrice}}</text>
+        </view>
+        <navigator class="buttomRight" url="/pages/pay/pay" open-type="navigate">
+            <image src="../../image/icon3.png"></image>
+        </navigator>
+    </view>
+       
+</view>
+  

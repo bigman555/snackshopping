@@ -1,0 +1,93 @@
+.swiperImg image {
+  width: 100%;
+  height: 350rpx;
+}
+.contianer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contianer .contianerTitle {
+  font-size: 45rpx;
+  color: #AB946D;
+  padding: 20rpx;
+  font-weight: 700;
+}
+.containerItem {
+  width: 100%;
+}
+.containerNav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.containerNav .nav {
+  padding: 10rpx;
+  width: 50%;
+  height: 400rpx;
+}
+.containerNav .nav image {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 30rpx;
+}
+.nav2 {
+  box-sizing: border-box;
+  padding: 10rpx;
+  width: 100%;
+  height: 400rpx;
+}
+.nav2 image {
+  border-radius: 30rpx;
+  width: 100%;
+  height: 400rpx;
+}
+.product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product .productTitle {
+  font-size: 45rpx;
+  color: #AB946D;
+  margin-top: 30rpx;
+  font-weight: 700;
+}
+.productItem {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.productItem .productNav {
+  height: 380rpx;
+  margin: 19rpx;
+  width: 45%;
+}
+.productItem .productNav .productImage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F6F5;
+  border-radius: 20rpx;
+}
+.productItem .productNav .productImage .productTxt {
+  display: block;
+  font-weight: 700;
+}
+.productItem .productNav .productImage image {
+  display: block;
+  width: 60%;
+  height: 60%;
+}

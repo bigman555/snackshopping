@@ -1,0 +1,84 @@
+.shoppingcart {
+  width: 100vw;
+  height: 100vh;
+}
+.shoppingcart .top {
+  width: 100vw;
+  height: 150rpx;
+}
+.shoppingcart .top .shoppingcartItem {
+  width: 100vw;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 10rpx;
+}
+.shoppingcart .top .shoppingcartItem .topMiddle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shoppingcart .top .shoppingcartItem .topMiddle .middleTop {
+  padding-bottom: 10rpx;
+}
+.shoppingcart .top .shoppingcartItem .topMiddle .middleButtom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+}
+.shoppingcart .top .shoppingcartItem .topMiddle .middleButtom view {
+  margin-left: 30rpx;
+}
+.shoppingcart .top .shoppingcartItem .topRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150rpx;
+}
+.shoppingcart .top .shoppingcartItem .topRight view {
+  height: 50%;
+  margin-top: 10rpx;
+}
+.shoppingcart .buttom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  height: 100rpx;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #AB946D;
+}
+.shoppingcart .buttom .buttomLeft {
+  width: 20%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shoppingcart .buttom .buttomMiddle {
+  width: 60%;
+  height: 100rpx;
+  position: relative;
+}
+.shoppingcart .buttom .buttomMiddle text {
+  position: absolute;
+  right: 0;
+  line-height: 100rpx;
+}
+.shoppingcart .buttom .buttomRight {
+  width: 20%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shoppingcart .buttom .buttomRight image {
+  width: 50rpx;
+  height: 50rpx;
+}

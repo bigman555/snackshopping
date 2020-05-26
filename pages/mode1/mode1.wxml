@@ -1,0 +1,19 @@
+<!--pages/mode/mode.wxml-->
+<view class="nav">
+    <image src="../../image/s3.png"></image>
+</view>
+<view class="container">
+    <navigator wx:for="{{shopList}}" wx:key="containerImg"
+     class="containerNav" url="/pages/cart/cart?id={{item.id}}" open-type="navigate">
+            <view class="containerImage">
+                <image src="{{item.containerImg}}"></image>
+                <text class="containerTxt"decode="true">
+                    {{item.title}}&nbsp;&nbsp;{{item.count}}&nbsp;{{item.unit}}
+                </text>
+                <view>
+                    ￥{{item.price}}
+                </view> 
+            </view>
+    </navigator>
+</view>
+    

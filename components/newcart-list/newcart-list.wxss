@@ -1,0 +1,118 @@
+.top {
+  width: 100%;
+  height: 800rpx;
+  position: relative;
+}
+.top .iconform {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.num{
+  width:50rpx;
+  height:50rpx;
+  background-color: #AB956D;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+  line-height: 50rpx;
+}
+.top .iconform .hide{
+  display:none;
+}
+.top .iconform image {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 2rpx;
+  left: 20rpx;
+
+}
+.top .cartImg {
+  position: absolute;
+  top: 100rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300rpx;
+  height: 300rpx;
+}
+.top .cartImg image {
+  width: 100%;
+  height: 100%;
+}
+.top .cartText {
+  display: flex;
+  width: 80%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #AB956D;
+  position: absolute;
+  top: 500rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top .cartText view {
+  margin-left: 45rpx;
+}
+.top .cartText view:nth-child(4) {
+  width: 50rpx;
+  height: 50rpx;
+}
+.top .cartText view:nth-child(4) image {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.top .stock {
+  position: absolute;
+  top: 600rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30rpx;
+}
+.top .title {
+  position: absolute;
+  top: 650rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 45rpx;
+}
+.top .price {
+  position: absolute;
+  top: 720rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40rpx;
+}
+.buttom {
+  width: 100%;
+}
+.buttomTitle {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  color: gray;
+}
+.buttomTitle view {
+  width: 33.33%;
+  text-align: center;
+}
+.buttomTitle view.active {
+  height: 50%;
+  color: #AB946D;
+  border-bottom: 2px solid #AB946D;
+}
+.bottomText {
+  padding-left: 50rpx;
+  font-weight: 600;
+  font-size: 38rpx;
+}

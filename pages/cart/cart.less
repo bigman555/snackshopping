@@ -1,0 +1,100 @@
+
+.top{
+    width: 100%;
+    height: 800rpx;
+    position: relative;
+    .iconform{
+        position: absolute;
+        top: 30rpx;
+        right: 30rpx;
+        width: 100rpx;
+        height: 100rpx;
+        image{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .cartImg{
+        position: absolute;
+        top: 100rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300rpx;
+        height: 300rpx;
+        image{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .cartText{
+        display: flex;
+        width: 80%;
+        height: 80rpx;
+        text-align: center;
+        line-height: 80rpx;
+        border-radius: 40rpx;
+        background-color: #AB956D;
+        position: absolute;
+        top: 500rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        view{
+            margin-left: 45rpx;
+        }
+        view:nth-child(4){
+            width: 50rpx;
+            height: 50rpx;
+            image{
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+    .stock{
+        position: absolute;
+        top: 600rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30rpx;
+    }
+    .title{
+        position: absolute;
+        top: 650rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 45rpx;
+    }
+    .price{
+        position: absolute;
+        top: 720rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 40rpx;
+    }
+}
+.buttom{
+    width: 100%;
+    .buttomTitle{
+        width: 100%;
+        height: 150rpx;
+        display: flex;
+        align-items: center;
+        color: gray;
+        view{
+            width: 33.33%;
+            text-align: center;
+        }
+        view.active{
+            height: 50%;
+            color: #AB946D;
+            border-bottom: 2px solid #AB946D;
+        }
+    }
+    .bottomText{
+        padding-left:50rpx;
+        font-weight: 600;
+        font-size: 38rpx;
+    }
+
+}
